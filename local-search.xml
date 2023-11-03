@@ -53,6 +53,19 @@
   
   
   
+  <entry>
+    <title>使用 WordPress搭建一个个人博客</title>
+    <link href="/20230723.html"/>
+    <url>/20230723.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="安装LNMP"><a href="#安装LNMP" class="headerlink" title="安装LNMP"></a>安装LNMP</h2><ol><li>下载LNMP<br> <code>wget http://soft.vpser.net/lnmp/lnmp2.0.tar.gz -cO lnmp2.0.tar.gz</code></li><li>解压并执行<br> <code>tar zxf lnmp2.0.tar.gz &amp;&amp; cd lnmp1.5 &amp;&amp; ./install.sh lnmp</code></li><li>之后选择想要安装的版本然后回车开始安装</li><li>时间比较长，耐心等待一下，看到以下显示表示安装成功![[图片&#x2F;Aweme&#x2F;折腾笔记&#x2F;使用 WordPress搭建一个个人博客&#x2F;1.png]]</li><li>配置nigix<ol><li>查看nginx配置文件,在目录 <code>/usr/local/nginx/conf</code> 下，<code>root  /home/wwwroot/default;</code> 表明网站根目录为<code>/home/wwwroot/default</code>，可访问<code>http://ip</code>查看![[2.png]]</li><li>如果你绑定了域名，可以为网站配置 Cloudflare 免费证书和 SSL<ol><li>在 Cloudflare 的控制面板中，确保 SSL 选项设置为 “Full” 或 “Full (strict)”，生成一个私钥（通常是 .key 格式）和一个证书文件（通常是 .pem 格式）放置到服务器中</li><li>在 “server” 块内部，添加以下 SSL 配置 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-comment"># 配置 SSL</span><br><span class="hljs-attribute">listen</span> <span class="hljs-number">443</span> ssl;<br><span class="hljs-attribute">ssl_certificate</span> /path/to/your_cloudflare_cert.pem;  <span class="hljs-comment"># 指向 Cloudflare 证书文件</span><br><span class="hljs-attribute">ssl_certificate_key</span> /path/to/your_cloudflare_private.key;  <span class="hljs-comment"># 指向Cloudflare 私钥文件</span><br></code></pre></td></tr></table></figure></li><li>验证nginx是否有配置错误 <code>nginx -t</code></li><li>重新加载nginx <code>nginx -s reload</code></li></ol></li></ol></li></ol><h2 id="安装WordPress"><a href="#安装WordPress" class="headerlink" title="安装WordPress"></a>安装WordPress</h2><ol><li><p>安装 wordpress 安装包并解压到 <code>/home/wwwroot</code><br> <code>wget https://cn.wordpress.org/latest-zh_CN.zip &amp;&amp; unzip latest-zh_CN.zip -d /home/wwwroot</code></p></li><li><p>登录MySQL，创建wordpress表，创建完后输入exit退出</p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs MySQL">mysql -u root -p <br>create database wordpress;<br>exit<br></code></pre></td></tr></table></figure><ol><li>如果使用远程连接，还需配置防火墙<code>ufw allow 3306</code></li><li>创建允许远程访问用户<code>CREATE USER &#39;remote_user&#39;@&#39;%&#39; IDENTIFIED BY &#39;securepassword&#39;;</code></li><li>刷新 <code>FLUSH PRIVILEGES;</code></li></ol></li><li><p>使用 vim 修改 nginx 配置文件,将网站根目录为<code>/home/wwwroot/wordpress</code><br> <code>vim /usr/local/nginx/conf/nginx.conf</code></p></li><li><p>保存文件</p></li><li><p>修改wordpress目录权限<br> <code>cd /home/wwwroot &amp;&amp; chown -R www wordpress/ &amp;&amp; chgrp -R www wordpress/</code></p></li><li><p>访问<a href="http://ip/wp-admin/setup-config.php%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85">http://ip/wp-admin/setup-config.php开始安装</a></p></li></ol>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
   
   
   
