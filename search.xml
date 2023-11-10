@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>C语言程序设计程序设计的基本概念</title>
+      <link href="/20231109.html"/>
+      <url>/20231109.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-算法的特性"><a href="#1-算法的特性" class="headerlink" title="1. 算法的特性"></a>1. 算法的特性</h2><ol><li>有穷性：算法必须在执行有限的步骤后终止，不会无限循环或进入死循环</li><li>确定性：算法的每个步骤必须明确定义，没有歧义。相同输入应产生相同的输出</li><li>可执行性：算法中的每个步骤都必须能够被执行，不会包含无法实现的操作</li><li>有零个或多个输入：算法可以接受零个或多个输入参数，这些参数是问题的输入数据</li><li>有一个或多个输出：算法产生一个或多个输出结果，这是问题的解决方案</li></ol><h2 id="2-三种基本结构"><a href="#2-三种基本结构" class="headerlink" title="2. 三种基本结构"></a>2. 三种基本结构</h2><blockquote><p>三种基本结构组成的算法可以解决任何复杂的问题</p></blockquote><ol><li>顺序结构：程序中的语句按顺序执行，从上到下，每个语句都执行一次</li><li>选择结构：选择结构允许根据条件的真假来执行不同的代码块。这包括<code>if</code>语句和<code>switch</code>语句等。例如，使用<code>if</code>语句可以根据条件执行不同的代码块，从而实现分支逻辑 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (condition) &#123;</span><br><span class="line">   <span class="comment">// 代码块1</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">   <span class="comment">// 代码块2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li>循环结构：循环结构允许多次执行相同的代码块，直到满足特定条件为止。这可以通过<code>for</code>、<code>while</code>和<code>do-while</code>等循环语句来实现 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (condition) &#123;</span><br><span class="line">   <span class="comment">// 循环执行的代码</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line"><span class="comment">// 循环执行的代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo相关说明</title>
+      <link href="/20231031.html"/>
+      <url>/20231031.html</url>
+      
+        <content type="html"><![CDATA[<p>欢迎来到 <a href="https://hexo.io/">Hexo</a>! 这是你的第一篇文章。有关详细信息，请查看<a href="https://hexo.io/docs/">文档</a>. 如果你在使用 Hexo 时遇到任何问题，可以在<a href="https://hexo.io/docs/troubleshooting.html">故障排除</a> 中找到答案， 也可以在<a href="https://github.com/hexojs/hexo/issues">GitHub</a>上问我。</p><h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;文章名&quot;</span></span><br></pre></td></tr></table></figure><p>更多信息：<a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="运行服务器"><a href="#运行服务器" class="headerlink" title="运行服务器"></a>运行服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure><p>更多信息：<a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure><p>更多信息：<a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="部署到远程站点"><a href="#部署到远程站点" class="headerlink" title="部署到远程站点"></a>部署到远程站点</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure><p>更多信息：<a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>部署Alist</title>
+      <link href="/20230807.html"/>
+      <url>/20230807.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL <span class="string">&quot;https://alist.nn.ci/v3.sh&quot;</span> | bash -s install</span><br></pre></td></tr></table></figure><blockquote><p>默认安装在 <code>/opt/alist</code> 中</p></blockquote><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL <span class="string">&quot;https://alist.nn.ci/v3.sh&quot;</span> | bash -s update</span><br></pre></td></tr></table></figure><h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL <span class="string">&quot;https://alist.nn.ci/v3.sh&quot;</span> | bash -s uninstall</span><br></pre></td></tr></table></figure><h2 id="密码"><a href="#密码" class="headerlink" title="密码"></a>密码</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加可执行权限</span></span><br><span class="line">sudo <span class="built_in">chmod</span> +x ./alist</span><br><span class="line"><span class="comment"># 随机生成一个密码</span></span><br><span class="line">./alist admin random</span><br><span class="line"><span class="comment"># 手动设置一个密码,`NEW_PASSWORD`是指你需要设置的密码</span></span><br><span class="line">./alist admin <span class="built_in">set</span> NEW_PASSWORD</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 折腾笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> alist </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用 WordPress搭建一个个人博客</title>
+      <link href="/20230723.html"/>
+      <url>/20230723.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="安装LNMP"><a href="#安装LNMP" class="headerlink" title="安装LNMP"></a>安装LNMP</h2><ol><li>下载LNMP<br> <code>wget http://soft.vpser.net/lnmp/lnmp2.0.tar.gz -cO lnmp2.0.tar.gz</code></li><li>解压并执行<br> <code>tar zxf lnmp2.0.tar.gz &amp;&amp; cd lnmp1.5 &amp;&amp; ./install.sh lnmp</code></li><li>之后选择想要安装的版本然后回车开始安装</li><li>时间比较长，耐心等待一下，看到以下显示表示安装成功<img src="/pic/1.png" alt="img"></li><li>配置nigix<ol><li>查看nginx配置文件,在目录 <code>/usr/local/nginx/conf</code> 下，<code>root  /home/wwwroot/default;</code> 表明网站根目录为<code>/home/wwwroot/default</code>，可访问<code>http://ip</code>查看<img src="/pic/2.png" alt="img"></li><li>如果你绑定了域名，可以为网站配置 Cloudflare 免费证书和 SSL<ol><li>在 Cloudflare 的控制面板中，确保 SSL 选项设置为 “Full” 或 “Full (strict)”，生成一个私钥（通常是 .key 格式）和一个证书文件（通常是 .pem 格式）放置到服务器中</li><li>在 “server” 块内部，添加以下 SSL 配置 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 配置 SSL</span></span><br><span class="line"><span class="attribute">listen</span> <span class="number">443</span> ssl;</span><br><span class="line"><span class="attribute">ssl_certificate</span> /path/to/your_cloudflare_cert.pem;  <span class="comment"># 指向 Cloudflare 证书文件</span></span><br><span class="line"><span class="attribute">ssl_certificate_key</span> /path/to/your_cloudflare_private.key;  <span class="comment"># 指向Cloudflare 私钥文件</span></span><br></pre></td></tr></table></figure></li><li>验证nginx是否有配置错误 <code>nginx -t</code></li><li>重新加载nginx <code>nginx -s reload</code></li></ol></li></ol></li></ol><h2 id="安装WordPress"><a href="#安装WordPress" class="headerlink" title="安装WordPress"></a>安装WordPress</h2><ol><li><p>安装 wordpress 安装包并解压到 <code>/home/wwwroot</code><br> <code>wget https://cn.wordpress.org/latest-zh_CN.zip &amp;&amp; unzip latest-zh_CN.zip -d /home/wwwroot</code></p></li><li><p>登录MySQL，创建wordpress表，创建完后输入exit退出</p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p </span><br><span class="line">create database wordpress;</span><br><span class="line">exit</span><br></pre></td></tr></table></figure><ol><li>如果使用远程连接，还需配置防火墙<code>ufw allow 3306</code></li><li>创建允许远程访问用户<code>CREATE USER &#39;remote_user&#39;@&#39;%&#39; IDENTIFIED BY &#39;securepassword&#39;;</code></li><li>刷新 <code>FLUSH PRIVILEGES;</code></li></ol></li><li><p>使用 vim 修改 nginx 配置文件,将网站根目录为<code>/home/wwwroot/wordpress</code><br> <code>vim /usr/local/nginx/conf/nginx.conf</code></p></li><li><p>保存文件</p></li><li><p>修改wordpress目录权限<br> <code>cd /home/wwwroot &amp;&amp; chown -R www wordpress/ &amp;&amp; chgrp -R www wordpress/</code></p></li><li><p>访问<a href="http://ip/wp-admin/setup-config.php%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85">http://ip/wp-admin/setup-config.php开始安装</a></p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 折腾笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> wordpress </tag>
+            
+            <tag> blog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
