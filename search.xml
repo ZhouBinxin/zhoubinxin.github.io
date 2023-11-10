@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>「第一行代码」Kotlin编程入门</title>
+      <link href="/20231110.html"/>
+      <url>/20231110.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Android </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>「第一行代码」第一行Android 代码</title>
+      <link href="/20231110.html"/>
+      <url>/20231110.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-Android简介"><a href="#1-Android简介" class="headerlink" title="1.Android简介"></a>1.Android简介</h2><h3 id="1-1-Android系统架构"><a href="#1-1-Android系统架构" class="headerlink" title="1.1 Android系统架构"></a>1.1 Android系统架构</h3><ol><li>Linux内核层</li><li>系统运行库层</li><li>应用框架层</li><li>应用层</li></ol><h3 id="1-2-Android应用开发特色"><a href="#1-2-Android应用开发特色" class="headerlink" title="1.2 Android应用开发特色"></a>1.2 Android应用开发特色</h3><ol><li>四大组件<ol><li>Activity：界面</li><li>Service：在后台运行</li><li>BroadcastReceiver：允许你的应用接收或发送来自广播消息</li><li>ContentP rovider：为应用程序之间共享数据提供了可能</li></ol></li><li>系统控件</li><li>SQLite数据库</li><li>多媒体</li></ol><h2 id="2-创建Android项目"><a href="#2-创建Android项目" class="headerlink" title="2.创建Android项目"></a>2.创建Android项目</h2><ol><li>res目录<ol><li>以“drawable”开头的目录存放图片</li><li>以“mipmap”开头的目录放应用图标</li><li>以“values”开头的目录放字符串、样式、颜色等配置</li><li>以“layout”开头的目录放布局文件</li></ol></li><li>资源引用<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">R.string.app_name <span class="comment">// 代码中</span></span><br><span class="line"><span class="meta">@string</span>/app_name <span class="comment">// xml中</span></span><br></pre></td></tr></table></figure></li></ol><h2 id="3-使用Android的日志工具Log"><a href="#3-使用Android的日志工具Log" class="headerlink" title="3.使用Android的日志工具Log"></a>3.使用Android的日志工具Log</h2><ol><li>Log.v()：用于打印那些最为琐碎的、意义最小的日志信息。对应级别verbose，是 Android 日志里面级别最低的一种</li><li>Log.d()：用于打印一些调试信息，这些信息对你调试程序和分析问题应该是有帮助的。对应级别debug，比verbose 高一级</li><li>Log.i()：用于打印一些比较重要的数据，这些数据应该是你非常想看到的、可以帮你分析用户行为的数据。对应级别info，比debug 高一级</li><li>Log.w()：用于打印一些警告信息，提示程序在这个地方可能会有潜在的风险，最好去修复一下这些出现警告的地方。对应级别warn，比info高一级</li><li>Log.e()：用于打印程序中的错误信息，比如程序进入了catch语句中。当有错误信息打印出来的时候，一般代表你的程序出现严重问题了，必须尽快修复。对应级别error，比 warn 高一级</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Android </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>「C语言程序设计」程序设计的基本概念</title>
       <link href="/20231109.html"/>
       <url>/20231109.html</url>
