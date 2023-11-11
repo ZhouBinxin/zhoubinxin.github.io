@@ -10,8 +10,8 @@ https://aweme.top/tags/index.html
 https://aweme.top/categories/index.html
 https://aweme.top/
 https://aweme.top/tags/Hexo/
-https://aweme.top/tags/C/
 https://aweme.top/tags/Android/
+https://aweme.top/tags/C/
 https://aweme.top/tags/wordpress/
 https://aweme.top/tags/blog/
 https://aweme.top/tags/alist/
