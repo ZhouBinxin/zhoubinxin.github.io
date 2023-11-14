@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://aweme.top/8ce8ea82eb87.html</loc>
+    
+    <lastmod>2023-11-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://aweme.top/tags/index.html</loc>
     
     <lastmod>2023-11-14</lastmod>
@@ -144,6 +153,13 @@
   </url>
   
   <url>
+    <loc>https://aweme.top/tags/Android/</loc>
+    <lastmod>2023-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://aweme.top/tags/wordpress/</loc>
     <lastmod>2023-11-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -152,13 +168,6 @@
   
   <url>
     <loc>https://aweme.top/tags/blog/</loc>
-    <lastmod>2023-11-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://aweme.top/tags/Android/</loc>
     <lastmod>2023-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -188,14 +197,14 @@
   </url>
   
   <url>
-    <loc>https://aweme.top/categories/%E6%8A%98%E8%85%BE%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://aweme.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2023-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://aweme.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://aweme.top/categories/%E6%8A%98%E8%85%BE%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2023-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
