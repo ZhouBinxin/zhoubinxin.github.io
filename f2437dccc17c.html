@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>「C语言程序设计」C程序设计的初步认识 | 南巷清风</title><meta name="author" content="PinHsin"><meta name="copyright" content="PinHsin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="简单C语言程序的构成和格式12345678910&#x2F;*求矩形面积*&#x2F;#include &quot;stdio.h&quot;int main() &amp;#123;	double a, b, area;	a &#x3D; 1.2; &#x2F;*将矩形的两条边长分别赋给a和b*&#x2F;	b &#x3D; 3.6;	area &#x3D; a * b; &#x2F;*计算矩形的面积并储存到变量area中*&#x2F;	printf(&quot;a&#x3D;%f,b&#x3D;%f,area">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>「C语言程序设计」C程序设计的初步认识 | 南巷清风</title><meta name="author" content="PinHsin"><meta name="copyright" content="PinHsin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="简单C语言程序的构成和格式 12345678910&#x2F;*求矩形面积*&#x2F;#include &quot;stdio.h&quot;int main() &amp;#123;	double a, b, area;	a &#x3D; 1.2; &#x2F;*将矩形的两条边长分别赋给a和b*&#x2F;	b &#x3D; 3.6;	area &#x3D; a * b; &#x2F;*计算矩形的面积并储存到变量area中*&#x2F;	printf(&quot;a&#x3D;%f,b&#x3D;%f,are">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「C语言程序设计」C程序设计的初步认识">
 <meta property="og:url" content="https://aweme.top/f2437dccc17c.html">
 <meta property="og:site_name" content="南巷清风">
-<meta property="og:description" content="简单C语言程序的构成和格式12345678910&#x2F;*求矩形面积*&#x2F;#include &quot;stdio.h&quot;int main() &amp;#123;	double a, b, area;	a &#x3D; 1.2; &#x2F;*将矩形的两条边长分别赋给a和b*&#x2F;	b &#x3D; 3.6;	area &#x3D; a * b; &#x2F;*计算矩形的面积并储存到变量area中*&#x2F;	printf(&quot;a&#x3D;%f,b&#x3D;%f,area">
+<meta property="og:description" content="简单C语言程序的构成和格式 12345678910&#x2F;*求矩形面积*&#x2F;#include &quot;stdio.h&quot;int main() &amp;#123;	double a, b, area;	a &#x3D; 1.2; &#x2F;*将矩形的两条边长分别赋给a和b*&#x2F;	b &#x3D; 3.6;	area &#x3D; a * b; &#x2F;*计算矩形的面积并储存到变量area中*&#x2F;	printf(&quot;a&#x3D;%f,b&#x3D;%f,are">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://aweme.top/img/head.jpg">
 <meta property="article:published_time" content="2023-11-11T07:24:00.000Z">
@@ -174,16 +174,19 @@
     document.addEventListener('pjax:send', () => { preloader.initLoading() })
     document.addEventListener('pjax:complete', () => { preloader.endLoading() })
   }
-})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url('/img/default_top_img.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="南巷清风"><img class="site-icon" src="/img/favicon.png"/><span class="site-name">南巷清风</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">「C语言程序设计」C程序设计的初步认识</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-11T07:24:00.000Z" title="发表于 2023-11-11 15:24:00">2023-11-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-11-11T07:25:00.000Z" title="更新于 2023-11-11 15:25:00">2023-11-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="「C语言程序设计」C程序设计的初步认识"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="简单C语言程序的构成和格式"><a href="#简单C语言程序的构成和格式" class="headerlink" title="简单C语言程序的构成和格式"></a>简单C语言程序的构成和格式</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*求矩形面积*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="type">double</span> a, b, area;</span><br><span class="line">	a = <span class="number">1.2</span>; <span class="comment">/*将矩形的两条边长分别赋给a和b*/</span></span><br><span class="line">	b = <span class="number">3.6</span>;</span><br><span class="line">	area = a * b; <span class="comment">/*计算矩形的面积并储存到变量area中*/</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a=%f,b=%f,area=%f\n&quot;</span>, a, b, area);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url('/img/default_top_img.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="南巷清风"><img class="site-icon" src="/img/favicon.png"/><span class="site-name">南巷清风</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">「C语言程序设计」C程序设计的初步认识</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-11T07:24:00.000Z" title="发表于 2023-11-11 15:24:00">2023-11-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-11-11T07:25:00.000Z" title="更新于 2023-11-11 15:25:00">2023-11-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="「C语言程序设计」C程序设计的初步认识"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="简单C语言程序的构成和格式">简单C语言程序的构成和格式</h2>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*求矩形面积*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="type">double</span> a, b, area;</span><br><span class="line">	a = <span class="number">1.2</span>; <span class="comment">/*将矩形的两条边长分别赋给a和b*/</span></span><br><span class="line">	b = <span class="number">3.6</span>;</span><br><span class="line">	area = a * b; <span class="comment">/*计算矩形的面积并储存到变量area中*/</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a=%f,b=%f,area=%f\n&quot;</span>, a, b, area);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ol>
 <li>C语言规定必须用main作为主函数名,每一个可执行的C程序都必须有且只有一个主函数</li>
 <li>C程序中的每一条执行语句都必须用分号结束</li>
-<li>注释内容必须放在符号“&#x2F;*”和“*&#x2F;”之间，在注释之间不可以再嵌套“&#x2F;*”和“*&#x2F;”</li>
+<li>注释内容必须放在符号“/*”和“*/”之间，在注释之间不可以再嵌套“/*”和“*/”</li>
 </ol>
-<h2 id="标识符、常量和变量"><a href="#标识符、常量和变量" class="headerlink" title="标识符、常量和变量"></a>标识符、常量和变量</h2><p><strong>标识符</strong></p>
+<h2 id="标识符、常量和变量">标识符、常量和变量</h2>
+<p><strong>标识符</strong></p>
 <ol>
 <li>由字母、数字和下划线组成，并且第一个字符必须为字母或下划线</li>
-<li>类别<ol>
+<li>类别
+<ol>
 <li>关键字</li>
 <li>预定义标识符</li>
 <li>用户标识符</li>
@@ -193,8 +196,10 @@
 <p><strong>常量</strong></p>
 <ol>
 <li>程序运行中，其值不能被改变的量</li>
-<li>分类<ol>
-<li>整型常量：只用数字表示，不带小数点<ol>
+<li>分类
+<ol>
+<li>整型常量：只用数字表示，不带小数点
+<ol>
 <li>短整型常量</li>
 <li>长整型常量</li>
 </ol>
@@ -207,21 +212,25 @@
 </ol>
 <p><strong>符号常量</strong></p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*计算圆面积*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PI 3.14159 <span class="comment">/*定义符号名PI为3.14159*/</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="type">double</span> r, s;</span><br><span class="line">	r = <span class="number">5.0</span>;</span><br><span class="line">	s = PI * r * r;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;s=%f\n&quot;</span>, s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p><strong>变量</strong></p>
 <ol>
 <li>变量指程序运行过程中其值可以改变的量</li>
 </ol>
-<h2 id="整型数据"><a href="#整型数据" class="headerlink" title="整型数据"></a>整型数据</h2><h3 id="整型常量"><a href="#整型常量" class="headerlink" title="整型常量"></a>整型常量</h3><ol>
+<h2 id="整型数据">整型数据</h2>
+<h3 id="整型常量">整型常量</h3>
+<ol>
 <li>整型常量可以用十进制、八进制和十六进制等形式表示</li>
 <li>八进制数：开头必须是数字“0”</li>
 <li>十六进制数：使用“0x”或“0X”开头；十六进制数中的字母a、b、c、d、e、f既可以小写也可以大写</li>
 <li>在C程序中，只有十进制数可以是负数，而八进制和十六进制数只能是正数</li>
 </ol>
-<h3 id="整型变量"><a href="#整型变量" class="headerlink" title="整型变量"></a>整型变量</h3><ol>
-<li>基本型的整型变量用类型名关键字int进行定义<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> k;</span><br><span class="line"><span class="type">int</span> i, j, k;</span><br><span class="line"><span class="type">int</span> i = <span class="number">1</span>, j = <span class="number">0</span>, k = <span class="number">2</span>;</span><br></pre></td></tr></table></figure></li>
+<h3 id="整型变量">整型变量</h3>
+<ol>
+<li>基本型的整型变量用类型名关键字int进行定义</li>
 </ol>
-<h3 id="整型数据的分类"><a href="#整型数据的分类" class="headerlink" title="整型数据的分类"></a>整型数据的分类</h3><ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> k;</span><br><span class="line"><span class="type">int</span> i, j, k;</span><br><span class="line"><span class="type">int</span> i = <span class="number">1</span>, j = <span class="number">0</span>, k = <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="整型数据的分类">整型数据的分类</h3>
+<ol>
 <li>短整型（short int）</li>
 <li>基本整型（int）</li>
 <li>长整型（long int）</li>
@@ -230,11 +239,14 @@
 <blockquote>
 <p>若不指定变量为无符号型，则变量隐含为有符号型（signed）</p>
 </blockquote>
-<h3 id="整数在内存中的储存形式"><a href="#整数在内存中的储存形式" class="headerlink" title="整数在内存中的储存形式"></a>整数在内存中的储存形式</h3><ol>
+<h3 id="整数在内存中的储存形式">整数在内存中的储存形式</h3>
+<ol>
 <li>通常把一个字节的最右边一位称为最低位，最左边一位称为最高位。对于一个有符号整数，其中最高位用来存放整数的符号，称为符号位。若是正整数，最高位放置0；若是负整数，最高位放置1</li>
 <li>负整数在内存中以“补码”形式存放</li>
 </ol>
-<p><strong>例</strong>：取二进制数10000101（十进制数-5）的补码<br>步骤如下：求原码的反码。把原码除符号位之外的二进制码按位取反，得11111010<br>         把所得的反码加1，得到原码的补码。得11111011</p>
+<p><strong>例</strong>：取二进制数10000101（十进制数-5）的补码<br>
+步骤如下：求原码的反码。把原码除符号位之外的二进制码按位取反，得11111010<br>
+把所得的反码加1，得到原码的补码。得11111011</p>
 <blockquote>
 <p>把内存中以补码形式存放的二进制码转化成十进制的负整数</p>
 <ul>
@@ -243,26 +255,33 @@
 <li>对所求得的数再减1</li>
 </ul>
 </blockquote>
-<h2 id="实型数据"><a href="#实型数据" class="headerlink" title="实型数据"></a>实型数据</h2><h3 id="实型常量"><a href="#实型常量" class="headerlink" title="实型常量"></a>实型常量</h3><ol>
+<h2 id="实型数据">实型数据</h2>
+<h3 id="实型常量">实型常量</h3>
+<ol>
 <li>小数形式：必须要有小数点</li>
 </ol>
-<h3 id="实型变量"><a href="#实型变量" class="headerlink" title="实型变量"></a>实型变量</h3><ol>
-<li>单精度型（float）<ol>
+<h3 id="实型变量">实型变量</h3>
+<ol>
+<li>单精度型（float）
+<ol>
 <li>定义：<code>float a,b,c;</code></li>
 <li>占4字节的存储单元</li>
 </ol>
 </li>
-<li>双精度型（double）<ol>
+<li>双精度型（double）
+<ol>
 <li>定义：<code>double x,y,z;</code></li>
 <li>占8字节的存储单元</li>
 </ol>
 </li>
 </ol>
-<h2 id="算数表达式"><a href="#算数表达式" class="headerlink" title="算数表达式"></a>算数表达式</h2><h3 id="基本的算数运算符"><a href="#基本的算数运算符" class="headerlink" title="基本的算数运算符"></a>基本的算数运算符</h3><ol>
+<h2 id="算数表达式">算数表达式</h2>
+<h3 id="基本的算数运算符">基本的算数运算符</h3>
+<ol>
 <li>加（+）</li>
 <li>减（-）</li>
 <li>乘（*）</li>
-<li>除（&#x2F;）</li>
+<li>除（/）</li>
 <li>求余（%）：运算对象只能是整型</li>
 </ol>
 <blockquote>
@@ -274,50 +293,64 @@
 <li>在C语言中，所有实型数的运算均以双精度方式进行</li>
 </ul>
 </blockquote>
-<h3 id="运算符的优先级、结合性和算数表达式"><a href="#运算符的优先级、结合性和算数表达式" class="headerlink" title="运算符的优先级、结合性和算数表达式"></a>运算符的优先级、结合性和算数表达式</h3><ol>
-<li><p>算数运算符的优先级![[3.png]]</p>
+<h3 id="运算符的优先级、结合性和算数表达式">运算符的优先级、结合性和算数表达式</h3>
+<ol>
+<li>
+<p>算数运算符的优先级![[3.png]]</p>
 </li>
-<li><p>算数运算符和圆括号的结合性</p>
+<li>
+<p>算数运算符和圆括号的结合性</p>
 <ol>
 <li>以上运算符中，只有单目运算符“+”和“-”的结合性是从右到左的，其余运算符的结合性都是从左到右</li>
 </ol>
 </li>
-<li><p>算数表达式</p>
+<li>
+<p>算数表达式</p>
 <ol>
 <li>定义：用算术运算符和一对圆括号将运算符（或称操作数）连接起来的、符合C语言语法的表达式</li>
 <li>运算对象可以是常量、变量和函数等</li>
 </ol>
 </li>
 </ol>
-<h3 id="强制类型转换表达式"><a href="#强制类型转换表达式" class="headerlink" title="强制类型转换表达式"></a>强制类型转换表达式</h3><ol>
-<li>格式：<code>(类型名)(表达式)</code><ol>
+<h3 id="强制类型转换表达式">强制类型转换表达式</h3>
+<ol>
+<li>格式：<code>(类型名)(表达式)</code>
+<ol>
 <li><code>(类型名)</code> 称为强制类型转换运算符</li>
 </ol>
 </li>
 </ol>
-<h2 id="赋值表达式"><a href="#赋值表达式" class="headerlink" title="赋值表达式"></a>赋值表达式</h2><h3 id="赋值运算符和赋值表达式"><a href="#赋值运算符和赋值表达式" class="headerlink" title="赋值运算符和赋值表达式"></a>赋值运算符和赋值表达式</h3><ol>
+<h2 id="赋值表达式">赋值表达式</h2>
+<h3 id="赋值运算符和赋值表达式">赋值运算符和赋值表达式</h3>
+<ol>
 <li>格式：<code>变量名=表达式</code></li>
 <li>赋值运算符的左侧只能是变量，不能是常量或表达式</li>
 <li>C语言规定最左边变量中所得到的新值就是赋值表达式的值</li>
 </ol>
-<h3 id="复合赋值表达式"><a href="#复合赋值表达式" class="headerlink" title="复合赋值表达式"></a>复合赋值表达式</h3><ol>
+<h3 id="复合赋值表达式">复合赋值表达式</h3>
+<ol>
 <li>定义：在赋值运算符之前加上其他运算符</li>
 </ol>
-<h3 id="赋值运算中的类型转换"><a href="#赋值运算中的类型转换" class="headerlink" title="赋值运算中的类型转换"></a>赋值运算中的类型转换</h3><ol>
+<h3 id="赋值运算中的类型转换">赋值运算中的类型转换</h3>
+<ol>
 <li>如果赋值运算符两侧的数据类型不一致，在赋值前系统将自动先把右侧表达式求得的数值按赋值号左边变量的类型进行转换</li>
-<li>在C语言的表达式（不包括赋值表达式）中的转换规则<ol>
-<li>一个短整型，一个长整型：$短整型 \to 长整型$</li>
-<li>一个是有符号整型，一个是无符号整型：$有符号整型 \to 无符号整型$</li>
+<li>在C语言的表达式（不包括赋值表达式）中的转换规则
+<ol>
+<li>一个短整型，一个长整型：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>短整型</mtext><mo>→</mo><mtext>长整型</mtext></mrow><annotation encoding="application/x-tex">短整型 \to 长整型</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord cjk_fallback">短整型</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord cjk_fallback">长整型</span></span></span></span></li>
+<li>一个是有符号整型，一个是无符号整型：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>有符号整型</mtext><mo>→</mo><mtext>无符号整型</mtext></mrow><annotation encoding="application/x-tex">有符号整型 \to 无符号整型</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord cjk_fallback">有符号整型</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord cjk_fallback">无符号整型</span></span></span></span></li>
 </ol>
 </li>
 </ol>
-<h2 id="自加、自减运算符和逗号"><a href="#自加、自减运算符和逗号" class="headerlink" title="自加、自减运算符和逗号"></a>自加、自减运算符和逗号</h2><h3 id="自加运算符和自减运算符"><a href="#自加运算符和自减运算符" class="headerlink" title="自加运算符和自减运算符"></a>自加运算符和自减运算符</h3><ol>
+<h2 id="自加、自减运算符和逗号">自加、自减运算符和逗号</h2>
+<h3 id="自加运算符和自减运算符">自加运算符和自减运算符</h3>
+<ol>
 <li>“++”和“–”都是单目运算符，不能给常量或表达式赋值</li>
 <li>既可以前缀形式出现，也可以后缀形式出现</li>
 <li>对于变量来说自增或自减1；对于表达式来说，前置先自增后使用变量值，后置先使用变量值再自增</li>
 <li>结合方向：从右至左</li>
 </ol>
-<h3 id="逗号运算符"><a href="#逗号运算符" class="headerlink" title="逗号运算符"></a>逗号运算符</h3><ol>
+<h3 id="逗号运算符">逗号运算符</h3>
+<ol>
 <li>结合方向：从左至右</li>
 <li>逗号运算符优先级最低</li>
 </ol>
