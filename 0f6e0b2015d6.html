@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>「软件设计师」计算机组成与体系结构 | 南巷清风</title><meta name="author" content="PinHsin"><meta name="copyright" content="PinHsin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="数据的表示  最小的数据单位：b 最小的存储单位：byte   进制的转换  R进制转十进制:将每一位数字用$R^k$表示然后相加，k与该位与小数点的距离有关，小数点左边第一位为0，右边第一位为-1，往左递增，往右递减如：二进制数$10100.01&#x3D;12^4+12^2+1*2^{-2}$ 十进制转R进制: 整数位使用短除法，即将十进制数除以R再取余，直至余数为零，然后将余数由下往上按顺序">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>「软件设计师」计算机组成与体系结构 | 南巷清风</title><meta name="author" content="PinHsin"><meta name="copyright" content="PinHsin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="数据的表示  最小的数据单位：b 最小的存储单位：byte   进制的转换  R进制转十进制:将每一位数字用$R^k$表示然后相加，k与该位与小数点的距离有关，小数点左边第一位为0，右边第一位为-1，往左递增，往右递减如：二进制数 $10100.01&#x3D;12^4+12^2+1*2^{-2}$ 十进制转R进制: 整数位使用短除法，即将十进制数除以R再取余，直至余数为零，然后将余数由下往上按顺">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「软件设计师」计算机组成与体系结构">
 <meta property="og:url" content="https://aweme.top/0f6e0b2015d6.html">
 <meta property="og:site_name" content="南巷清风">
-<meta property="og:description" content="数据的表示  最小的数据单位：b 最小的存储单位：byte   进制的转换  R进制转十进制:将每一位数字用$R^k$表示然后相加，k与该位与小数点的距离有关，小数点左边第一位为0，右边第一位为-1，往左递增，往右递减如：二进制数$10100.01&#x3D;12^4+12^2+1*2^{-2}$ 十进制转R进制: 整数位使用短除法，即将十进制数除以R再取余，直至余数为零，然后将余数由下往上按顺序">
+<meta property="og:description" content="数据的表示  最小的数据单位：b 最小的存储单位：byte   进制的转换  R进制转十进制:将每一位数字用$R^k$表示然后相加，k与该位与小数点的距离有关，小数点左边第一位为0，右边第一位为-1，往左递增，往右递减如：二进制数 $10100.01&#x3D;12^4+12^2+1*2^{-2}$ 十进制转R进制: 整数位使用短除法，即将十进制数除以R再取余，直至余数为零，然后将余数由下往上按顺">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://aweme.top/img/head.jpg">
 <meta property="article:published_time" content="2023-11-18T02:48:00.000Z">
-<meta property="article:modified_time" content="2023-11-18T03:06:00.000Z">
+<meta property="article:modified_time" content="2023-11-18T03:14:00.000Z">
 <meta property="article:author" content="PinHsin">
 <meta property="article:tag" content="软件设计师">
 <meta name="twitter:card" content="summary">
@@ -56,7 +56,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2023-11-18 11:06:00'
+  postUpdate: '2023-11-18 11:14:00'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -174,7 +174,7 @@
     document.addEventListener('pjax:send', () => { preloader.initLoading() })
     document.addEventListener('pjax:complete', () => { preloader.endLoading() })
   }
-})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url('/img/default_top_img.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="南巷清风"><img class="site-icon" src="/img/favicon.png"/><span class="site-name">南巷清风</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">「软件设计师」计算机组成与体系结构</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-18T02:48:00.000Z" title="发表于 2023-11-18 10:48:00">2023-11-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-11-18T03:06:00.000Z" title="更新于 2023-11-18 11:06:00">2023-11-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>14分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="「软件设计师」计算机组成与体系结构"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="数据的表示"><a href="#数据的表示" class="headerlink" title="数据的表示"></a>数据的表示</h2><blockquote>
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url('/img/default_top_img.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="南巷清风"><img class="site-icon" src="/img/favicon.png"/><span class="site-name">南巷清风</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">「软件设计师」计算机组成与体系结构</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-18T02:48:00.000Z" title="发表于 2023-11-18 10:48:00">2023-11-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-11-18T03:14:00.000Z" title="更新于 2023-11-18 11:14:00">2023-11-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>14分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="「软件设计师」计算机组成与体系结构"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="数据的表示"><a href="#数据的表示" class="headerlink" title="数据的表示"></a>数据的表示</h2><blockquote>
 <ul>
 <li>最小的数据单位：b</li>
 <li>最小的存储单位：byte</li>
@@ -182,7 +182,7 @@
 </blockquote>
 <p><strong>进制的转换</strong></p>
 <ol>
-<li>R进制转十进制:将每一位数字用$R^k$表示然后相加，k与该位与小数点的距离有关，小数点左边第一位为0，右边第一位为-1，往左递增，往右递减如：二进制数$10100.01&#x3D;1<em>2^4+1</em>2^2+1*2^{-2}$</li>
+<li>R进制转十进制:将每一位数字用$R^k$表示然后相加，k与该位与小数点的距离有关，小数点左边第一位为0，右边第一位为-1，往左递增，往右递减如：二进制数 $10100.01&#x3D;1<em>2^4+1</em>2^2+1*2^{-2}$</li>
 <li>十进制转R进制: 整数位使用短除法，即将十进制数除以R再取余，直至余数为零，然后将余数由下往上按顺序排列，小数位乘以R，每乘一次就取它的整数位（整数位为零时就取零)，直至小数位为零，然后将取得的整数位由上往下排列即可。</li>
 <li>二进制转八进制及二进制转十六进制：将二进制数以小数点为界向左及向右每三个一组(转八进制),或者每四个一组(转十六进制)，缺的数用零来补充，然后依次转化为相应的进制数然后按顺序排列即可。</li>
 </ol>
@@ -226,9 +226,9 @@
 </tbody></table>
 <p><strong>浮点数</strong></p>
 <ol>
-<li>浮点数的概念：浮点数即科学计数法，如$1000&#x3D;1*10^3$; 其中，1为尾数，10为基数，3为指数</li>
+<li>浮点数的概念：浮点数即科学计数法，如 $1000&#x3D;1*10^3$ ; 其中，1为尾数，10为基数，3为指数</li>
 <li>表示格式：阶符+阶码+数符+尾数</li>
-<li>计算机中浮点数的运算：当两个指数不等的浮点数相加时，计算机会把低阶浮点数的指数转化为高阶浮点数的指数，如：$1.0<em>10^3+1.19</em>10^2$，计算机会将$1.19<em>10^2$转化为$0.119</em>10^3$，然后作和，然后结果规格化(将尾数的绝对值限定在区间[0.5,1])，如：得到$11.3019<em>10^3$以后，要化为$1.13019</em>10^4$</li>
+<li>计算机中浮点数的运算：当两个指数不等的浮点数相加时，计算机会把低阶浮点数的指数转化为高阶浮点数的指数，如： $1.0<em>10^3+1.19</em>10^2$ ，计算机会将 $1.19<em>10^2$ 转化为 $0.119</em>10^3$ ，然后作和，然后结果规格化(将尾数的绝对值限定在区间[0.5,1])，如：得到 $11.3019<em>10^3$ 以后，要化为 $1.13019</em>10^4$</li>
 <li>浮点数所能表示的数值范围主要由阶码决定，所表示的数值精度则由尾数决定</li>
 </ol>
 <h2 id="中央处理器（CPU）"><a href="#中央处理器（CPU）" class="headerlink" title="中央处理器（CPU）"></a>中央处理器（CPU）</h2><p><strong>CPU由运算器和控制器组成</strong></p>
@@ -412,7 +412,7 @@
 <li>概念：主存的编址就是把许多块芯片组成相应的存储器</li>
 <li>一般表示方式如下图，其中左图一中的8表示它有8个地址空间，4表示每一个地址空间存储了4位的信息</li>
 </ol>
-<p><img src="/5.jpg" alt="img"></p>
+<p><img src="/pic/5.jpg" alt="img"></p>
 <h2 id="磁盘结构与参数"><a href="#磁盘结构与参数" class="headerlink" title="磁盘结构与参数"></a>磁盘结构与参数</h2><ol>
 <li>存取时间&#x3D;寻道时间+等待时间(平均定位时间+转动延迟)<ol>
 <li>寻道时间是指磁头移动到磁道所需的时间</li>
@@ -452,7 +452,7 @@
 <ol>
 <li>数据输入n个子系统中，它们各自得出自己的结果，然后汇总到表决器，表决器将遵循少数服从多数的原则，输出大多数子系统得到的那个答案然后进行输出</li>
 </ol>
-<p><img src="/6.png" alt="img"></p>
+<p><img src="/pic/6.png" alt="img"></p>
 <h2 id="校验码"><a href="#校验码" class="headerlink" title="校验码"></a>校验码</h2><p><strong>奇偶校验码</strong></p>
 <ol>
 <li>在编码中增加一维校验位来使校验码中1的个数为奇数（奇校验）或偶数（偶校验）</li>
