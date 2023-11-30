@@ -4,6 +4,181 @@
   
     
     <entry>
+      <title>「C语言程序设计」其他</title>
+      <link href="/681ae77c920d.html"/>
+      <url>/681ae77c920d.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="memset函数"><code>memset</code>函数</h2><p><code>memset</code> 函数是C语言标准库中的一个函数，它用于将一段内存区域的每个字节设置为指定的值。其主要作用是初始化内存，将一块内存区域的内容设置为相同的值。</p><p><code>memset</code> 函数的原型如下：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> *<span class="title function_">memset</span><span class="params">(<span class="type">void</span> *s, <span class="type">int</span> c, <span class="type">size_t</span> n)</span>;</span><br></pre></td></tr></table></figure><p>参数解释：</p><ul><li><code>s</code>：指向要设置的内存区域的指针。</li><li><code>c</code>：要设置的值，通常是一个整数。<code>c</code> 被转换为无符号字符，然后复制到内存中。</li><li><code>n</code>：要设置的字节数，即要初始化的内存区域的大小。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>「C语言程序设计」文件</title>
+      <link href="/14dcc4940e41.html"/>
+      <url>/14dcc4940e41.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="C语言文件的概念">C语言文件的概念</h2><ol><li>顺序存取<ol><li>进行读或写操作时，总是从文件的开头开始，从头到尾顺序地读或写</li></ol></li><li>直接存取（随机存取）<ol><li>通过调用C语言的函数库去指定开始读或写的字节号，然后直接对此位置上的数据进行读，或把数据写到此位置上</li></ol></li></ol><h2 id="文件指针">文件指针</h2><ol><li>一般形式：<code>FILE *指针变量名</code></li></ol><h2 id="打开文件">打开文件</h2><ol><li>fopen函数的一般调用形式：<code>fopen(文件名，文件使用方式);</code><ol><li>若调用成功，函数返回一个FILE类型的指针，赋给文件指针变量fp，从而把指针fp与文件file_a联系起来</li><li>若打开文件失败，返回NULL</li></ol></li><li>文件使用方式<ol><li>“r”：为读打开文本文件，对打开文件只能进行“读”操作</li><li>“rb”：为读打开二进制文件，其余功能与“r”相同</li><li>“w”：为写打开文本文件。如果指定文件不存在，系统将用在fopen调用中指定的文件名建立一个新文件；如果指定文件存在，则从文件的起始位置开始写，文件中原有的内容将全部消失</li><li>“wb”：为写打开一个二进制文件。可以在指定文件位置进行写操作，其余功能与“w”相似</li><li>“a”：为在文件后面添加数据而打开文本文件。如果指定文件不存在，系统将用在fopen调用中指定的文件名建立一个新文件；如果指定文件存在，则文件中原有的内容将保存，新的数据写在原有内容之后</li><li>“ab”：为在文件后面添加数据而打开二进制文件。其余功能与“a”相同</li><li>“r+”：为读和写打开文本文件。指定文件应当已经存在，读和写总是从文件的起始位置开始；在写新数据时，只覆盖新数据所占的空间，其后的老数据并不丢失</li><li>“rb+”：为读和写打开二进制文件。功能与“r+”相同，只是在读和写时，可以由位置函数设置读和写的起始位置</li><li>“w+”：首先建立一个新文件，进行写操作，随后可以从头开始读。如果指定文件已存在，则原有的内容将全部消失</li><li>“wb+”：功能与“w+”相同，只是在随后的读和写时，可以由位置函数设置读和写的起始位置</li><li>“a+”：功能与“a”相同，只是在文件尾部添加新的数据后，可以从头开始读</li><li>“ab+”：功能与“a+”相同，只是在文件尾部添加新的数据后，可以由位置函数设置开始读的起始位置</li></ol></li></ol><h2 id="关闭文件">关闭文件</h2><ol><li>fclose函数的调用形式：<code>fclose(文件指针);</code></li><li>当成功执行了关闭操作后，函数返回0，否则返回非0</li></ol><h2 id="调用getc-fgetc-和putc-fputc-函数进行输入和输出">调用getc(fgetc)和putc(fputc)函数进行输入和输出</h2><h3 id="一、调用putc（或fputc）函数输出一个字符">一、调用putc（或fputc）函数输出一个字符</h3><ol><li>putc函数调用形式：<code>putc(ch,fp);</code><ol><li>ch是待输出的某个字符，它可以是一个字符常量，也允许是一个字符变量</li><li>fp是文件指针</li><li>将字符ch写到文件指针fp文件所指的文件中去</li><li>如果输出成功，putc函数返回所输出的字符；如果输出失败，则返回一个EOF值。EOF是在stdio.h库函数文件中定义的符号常量，其值等于-1</li></ol></li><li>fputc函数的调用形式和功能与putc函数完全相同</li></ol><h3 id="二、调用getc（或fgetc）函数输出一个字符">二、调用getc（或fgetc）函数输出一个字符</h3><ol><li>getc函数的调用形式：<code>ch=getc(pf);</code><ol><li>pf指文件指针</li><li>从pf指定的文件中读入一个字符，并把它作为函数值返回</li></ol></li><li>fgetc函数的调用形式和功能与getc函数完全相同</li></ol><h2 id="判断文件结束函数feof">判断文件结束函数feof</h2><ol><li>如果遇到文件结束，函数feof(fp)的值为1，否则为0</li></ol><h2 id="fscanf函数和fprintf函数">fscanf函数和fprintf函数</h2><ol><li>fsacnf函数：<code>fscanf(文件指针，格式控制字符串，输入项表);</code><ol><li>fscanf函数只能从文本文件中按格式输入</li></ol></li><li>fprintf函数：<code>fprint(文件指针，格式控制字符串，输入项表);</code><ol><li>fprintf函数按格式将内存中的数据转换成对应的字符，并以ASCII代码形式输出到文本文件中</li></ol></li></ol><h2 id="fgets函数和fputs函数">fgets函数和fputs函数</h2><ol><li>fgets函数：<code>fgets(str,n,fp);</code><ol><li>fp是文件指针，str是存放字符串的起始地址，n是一个int型变量</li><li>从fp所指文件中读入n-1个字符放入以str为起始地址的空间内。如果在未读满n-1个字符时，已读到一个换行符或一个EOF（文件结束标志），则结束本次读操作，读入字符串的最后包含读到的换行符</li><li>读入结束后，系统将自动在最后加 <code>\0</code> ，并以str作为函数值返回</li></ol></li><li>fputs函数：<code>fputs(str,fp);</code><ol><li>fp是文件指针；str是待输出的字符串，可以是字符串常量，指向字符串的指针或存放字符串的字符数组名等</li><li>最后的 <code>\0</code> 并不输出，也不自动加 <code>\n</code></li><li>输出成功函数值为正整数，否则为-1（EOF）</li><li>调用函数输出字符时，文件中各字符串将首尾相连，它们之间将不存在任何间隔符</li></ol></li></ol><h2 id="fread函数和fwrite函数">fread函数和fwrite函数</h2><ol><li>fread函数：<code>fread(buffer,size,count,fp);</code><ol><li>buffer是数据块的指针，内存块的首地址，输入的数据存入此内存块中</li></ol></li><li>fwrite函数：<code>fwrite(buffer,size,count,fp);</code><ol><li>buffer是数据块的指针，准备输出的内存块的起始地址</li></ol></li><li>size表示每个数据块的字节数</li><li>count用来指定每读、写一次，输入或输出数据块的个数（每个数据块具有size字节）</li></ol><h2 id="文件定位函数">文件定位函数</h2><h3 id="fseek函数">fseek函数</h3><ol><li>调用形式：<code>fseek(fp,offset,origin);</code><ol><li>pf是文件指针</li><li>offset是以字节为单位的位移量，为长整型</li><li>origin是起始点，用以指定位移量是以哪个位置为基准，起始点既可以用标识符来表示，也可以用数字来表示</li></ol></li></ol><table><thead><tr><th style="text-align:left">标识符</th><th style="text-align:left">数字</th><th style="text-align:left">代表的起始点</th></tr></thead><tbody><tr><td style="text-align:left">SEEK_SET</td><td style="text-align:left">0</td><td style="text-align:left">文件开始</td></tr><tr><td style="text-align:left">SEEK_END</td><td style="text-align:left">2</td><td style="text-align:left">文件末尾</td></tr><tr><td style="text-align:left">SEEK_CUR</td><td style="text-align:left">1</td><td style="text-align:left">文件的当前位置</td></tr></tbody></table><ol start="2"><li>对于二进制文件，当位移量为正整数时，表示位置指针从指定的起始点向文件尾部方向移动；当位移量为负整数时，表示位置指针从指定的起始点向文件首部方向移动</li><li>对于文本文件，位移量必须是0</li></ol><h3 id="ftell函数">ftell函数</h3><ol><li>ftell函数用以获得文件当前位置指针的位置，函数给出当前位置指针相对于文件开头的字节数</li><li>调用形式：<code>long t = ftell(fp);</code><ol><li>当函数调用出错时，函数返回-1L</li></ol></li></ol><h3 id="rewind函数">rewind函数</h3><ol><li>调用形式：<code>rewind(pf);</code></li><li>函数没有返回值，函数的功能是使文件的位置指针回到文件的开头</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>「C语言程序设计」位运算</title>
+      <link href="/1352fcc57e40.html"/>
+      <url>/1352fcc57e40.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="位运算符">位运算符</h2><ol><li>只有 <code>~</code> 为单目运算符，其余均为双目运算符</li></ol><table><thead><tr><th style="text-align:left">运算符</th><th style="text-align:left">含义</th><th style="text-align:left">优先级</th></tr></thead><tbody><tr><td style="text-align:left"><code>~</code></td><td style="text-align:left">按位求反</td><td style="text-align:left">1（高）</td></tr><tr><td style="text-align:left">&lt;&lt;</td><td style="text-align:left">左移</td><td style="text-align:left">2</td></tr><tr><td style="text-align:left">&gt;&gt;</td><td style="text-align:left">右移</td><td style="text-align:left">2</td></tr><tr><td style="text-align:left">&amp;</td><td style="text-align:left">按位与</td><td style="text-align:left">3</td></tr><tr><td style="text-align:left">^</td><td style="text-align:left">按位异或</td><td style="text-align:left">4</td></tr><tr><td style="text-align:left">|</td><td style="text-align:left">按位或</td><td style="text-align:left">5（低）</td></tr></tbody></table><h2 id="位运算符的运算功能">位运算符的运算功能</h2><h3 id="“按位取反”运算">“按位取反”运算</h3><ol><li>把运算对象的内容按位取反</li></ol><blockquote><p><code>~0115</code> 将八进制数115按位取反<br><code>~ 0 1 0 0 1 1 0 1</code> 把运算对象用二进制来表示<br>————————<br>1 0 1 1 0 0 1 0</p></blockquote><h3 id="“左移”运算">“左移”运算</h3><ol><li>运算符左边是移位运算符，右边是整型表达式，代表移位位数</li><li>左移时，右端（低位）补0；左端（高位）移出的部分舍弃</li></ol><blockquote><p>char a=6,b;<br>b=a&lt;&lt;2;<br>用二进制来表示运算过程如下：<br>a:0 0 0 0 0 1 1 0<br>b=a&lt;&lt;2:0 0 0 1 1 0 0 0</p></blockquote><h3 id="“右移”运算">“右移”运算</h3><ol><li>右移时，右端（低位）移出的二进制数舍弃，左端（高位）移入的二进制数分两种情况：对于无符号整数和正整数，高位补0；对于负整数，高位补1</li></ol><h3 id="“按位与”运算">“按位与”运算</h3><ol><li>把参与运算的两个运算数按对应的二进制位分别进行“与”运算，当两个相应的位数都为1时，该位的结果为1；否则为0</li></ol><h3 id="“按位异或”运算">“按位异或”运算</h3><ol><li>参与运算的两个运算数中相对应的二进制位上，若数相同，则该位的结果为0；若数不同，则该位的结果为1</li></ol><h3 id="“按位或”运算">“按位或”运算</h3><ol><li>参与运算的两个运算数中，只要两个相应的二进制位中有一个为1，该位的运算结果即为1；只有当两个相应位的数都为0时，该位的运算结果才为0</li></ol><h3 id="位数不同的运算数之间的运算规则">位数不同的运算数之间的运算规则</h3><ol><li>位运算的对象可以是整型（long int或int或short）和字符型（char）数据</li><li>当两个运算数类型不同时位数也会不同，系统将进行以下处理<ol><li>先将两个运算数右端对齐</li><li>再将位数短的一个运算数往高位扩充，即无符号和正整数左侧用0补全，负数左侧用1补全，然后对位数相等的这两个运算数按位进行位运算</li></ol></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>「C语言程序设计」结构体、共用体和用户定义类型</title>
+      <link href="/4a32bc901820.html"/>
+      <url>/4a32bc901820.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="用typedef说明一种新类型名">用typedef说明一种新类型名</h2><ol><li>一般形式：<code>typedef 类型名 标识符;</code></li><li>“类型名”必须是在此语句之前已有定义的类型标识符</li><li>“标识符”是一个用户定义标识符，用作新的类型名</li><li>typedef语句的作用仅仅是用“标识符”来代表已存在的“类型名”，并未产生新的数据类型，原有类型名依然有效</li></ol><h2 id="结构体类型">结构体类型</h2><h3 id="结构体类型的说明">结构体类型的说明</h3><ol><li>一般形式</li></ol><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> 结构体标识名&#123;</span></span><br><span class="line">类型名<span class="number">1</span> 结构成员名表<span class="number">1</span>;</span><br><span class="line">类型名<span class="number">2</span> 结构成员名表<span class="number">2</span>;</span><br><span class="line">·</span><br><span class="line">·</span><br><span class="line">·</span><br><span class="line">类型名n 结构成员名表n;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><ol start="2"><li>struct是关键字，是结构体类型的标志</li><li>“结构体标识名”和“结构成员名”都是用户定义的标识符，其中“结构体标识符”是可选项，在说明中可以不出现</li><li>每个“结构成员名表”中都可以含有多个同类型的成员名，它们之间以逗号分隔</li><li>结构体中的成员名可以和程序中的其他变量同名；不同结构体中的成员也可以同名</li><li>结构体类型说明中的“类型名1”~“类型名n”不仅可以是简单数据类型，也可以是构造类型、某种结构体类型</li><li>ANSI C标准规定结构体至少允许嵌套15层，并且允许内嵌结构体成员的名字与外层成员的名字相同</li></ol><h3 id="结构体类型的变量、数组和指针变量的定义">结构体类型的变量、数组和指针变量的定义</h3><ol><li>紧跟在结构体类型说明之后进行定义<ol><li>std只能存放1组数据；pers可以存放3组；pstd可以指向具有struct student类型的存储单元，但目前还没有具体的指向</li></ol></li></ol><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span>&#123;</span></span><br><span class="line"><span class="type">char</span> name[<span class="number">12</span>];</span><br><span class="line"><span class="type">char</span> sex;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">data</span> <span class="title">birthday</span>;</span></span><br><span class="line"><span class="type">float</span> sc[<span class="number">4</span>];</span><br><span class="line">&#125; <span class="built_in">std</span>,pers[<span class="number">3</span>],*pstd;</span><br></pre></td></tr></table></figure><ol start="2"><li>在说明一个无名结构体类型的同时，直接进行定义</li></ol><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">···</span><br><span class="line">&#125; <span class="built_in">std</span>,pers[<span class="number">3</span>],*pstd;</span><br></pre></td></tr></table></figure><ol start="3"><li>先说明结构体类型，再单独进行变量定义<ol><li>这种定义方法不能只使用struct而不写结构体标识符student</li></ol></li></ol><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span>&#123;</span></span><br><span class="line">···</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">std</span>,<span class="title">pers</span>[3],*<span class="title">pstd</span>;</span></span><br></pre></td></tr></table></figure><ol start="4"><li>使用typedef说明一个结构体类型名，再用新类型名来定义变量</li></ol><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line"><span class="type">char</span> name[<span class="number">12</span>];</span><br><span class="line"><span class="type">char</span> sex;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">data</span> <span class="title">birthday</span>;</span></span><br><span class="line"><span class="type">float</span> sc[<span class="number">4</span>];</span><br><span class="line">&#125; STREC;</span><br><span class="line">STREC <span class="built_in">std</span>,pers[<span class="number">4</span>],*pstd;</span><br></pre></td></tr></table></figure><h3 id="给结构体变量、数组赋初值">给结构体变量、数组赋初值</h3><ol><li>给结构体变量赋初值：所赋初值顺序放在一对花括号中<ol><li>不允许跳过前面的成员给后面的成员赋初值，可以只给前面的若干个成员赋初值，对于后面未赋初值的成员，系统将自动为数值型和字符型数据赋初值零</li></ol></li></ol><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span>&#123;</span></span><br><span class="line"><span class="type">char</span> name[<span class="number">12</span>];</span><br><span class="line"><span class="type">char</span> sex;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">data</span> <span class="title">birthday</span>;</span></span><br><span class="line"><span class="type">float</span> sc[<span class="number">4</span>];</span><br><span class="line">&#125; <span class="built_in">std</span>=&#123;<span class="string">&quot;Li Ming&quot;</span>,<span class="string">&#x27;M&#x27;</span>,<span class="number">1962</span>,<span class="number">5</span>,<span class="number">10</span>,<span class="number">88</span>,<span class="number">76</span>,<span class="number">86.5</span>,<span class="number">90</span>&#125;;</span><br></pre></td></tr></table></figure><ol start="2"><li>给结构体数组赋初值：通常将其成员的值依次放在一对花括号中</li></ol><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">bookcard</span>&#123;</span></span><br><span class="line"><span class="type">char</span> num[<span class="number">5</span>];</span><br><span class="line"><span class="type">float</span> money;</span><br><span class="line">&#125; bk[<span class="number">3</span>]=&#123;&#123;<span class="string">&quot;No.1&quot;</span>,<span class="number">35.5</span>&#125;,&#123;<span class="string">&quot;No.2&quot;</span>,<span class="number">25.0</span>&#125;,&#123;<span class="string">&quot;No.3&quot;</span>,<span class="number">66.7</span>&#125;&#125;;</span><br></pre></td></tr></table></figure><h3 id="引用结构体变量中的数据">引用结构体变量中的数据</h3><h4 id="对结构体变量成员的引用">对结构体变量成员的引用</h4><ol><li>引用形式<ol><li>结构体变量名.成员名</li><li>指针变量名-&gt;成员名</li><li>(*指针变量名).成员名</li></ol></li><li>“.”称为运算成员符；“-&gt;”称为结构指向运算符，之间没有空格</li><li>访问结构体变量中哥内嵌结构体成员时，必须逐层使用成员名定位</li></ol><h4 id="相同类型结构体变量之间的整体赋值">相同类型结构体变量之间的整体赋值</h4><ol><li>ANSI C标准允许相同类型的结构体变量之间进行整体赋值</li></ol><h3 id="函数之间结构体变量的数据传递">函数之间结构体变量的数据传递</h3><ol><li>向函数传递结构体变量中单个成员的数据</li><li>向函数传递整个结构体变量中的数据</li><li>传递结构体变量的地址</li><li>向函数传递结构体数组名</li><li>函数返回值是结构体类型</li><li>函数返回值可以是指向结构体变量的指针类型</li></ol><h3 id="利用结构体变量构成链表">利用结构体变量构成链表</h3><ol><li>结构体中含有可以指向本结构体的指针成员</li></ol><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">一个简单的链表</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">node</span> <span class="title">NODETYPE</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    NODETYPE a, b, c, *h, *p;</span><br><span class="line">    a.data = <span class="number">10</span>;</span><br><span class="line">    b.data = <span class="number">20</span>;</span><br><span class="line">    c.data = <span class="number">30</span>;    <span class="comment">/*给变量中的data域赋值*/</span></span><br><span class="line">    h = &amp;a; <span class="comment">/*将结点相连*/</span></span><br><span class="line">    a.next = &amp;b;</span><br><span class="line">    b.next = &amp;c;</span><br><span class="line">    c.next = <span class="literal">NULL</span>;</span><br><span class="line">    p = h;</span><br><span class="line">    <span class="keyword">while</span>(p)&#123;   <span class="comment">/*移动p，使之依次指向a、b、c,输出它们data域中的值*/</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, p-&gt;data);</span><br><span class="line">        p = p-&gt;next;    <span class="comment">/*p顺序后移*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="2"><li>单向链表<ol><li>每个结点应该由两个成员组成：一个是整型的成员；一个是指向自身结构的指针类型成员</li></ol></li></ol><h2 id="共用体">共用体</h2><blockquote><p>结构体变量中的成员各自占有自己的存储空间，而共用体变量中的所有成员占有同一个存储空间</p></blockquote><h3 id="共用体类型的说明和变量定义">共用体类型的说明和变量定义</h3><ol><li>一般形式</li></ol><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">union</span> 共用体标识名&#123;</span></span><br><span class="line">类型名<span class="number">1</span> 共用体成员名<span class="number">1</span>;</span><br><span class="line">类型名<span class="number">2</span> 共用体成员名<span class="number">2</span>;</span><br><span class="line">·</span><br><span class="line">·</span><br><span class="line">·</span><br><span class="line">类型名n 共用体成员名n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="2"><li>union是关键字，是共用体类型的标志</li><li>共用体标识名是可选项，在说明中可以不出现</li><li>共用体成员可以是简单变量，也可以是数组、指针、结构体和共用体（结构体成员也可以是共用体）</li><li>共用体变量的定义与结构体变量的定义类似</li></ol><blockquote><p>(1) 共用体变量在定义的同时只能用第一个成员的类型的值进行初始化<br>(2) 由于共用体变量中的所有成员共享存储空间，因此变量中的所有成员的首地址相同，而且变量的首地址也就是该成员变量的首地址</p></blockquote><h3 id="共用体变量的引用">共用体变量的引用</h3><ol><li>共用体变量中成员的引用<ol><li>一般形式</li></ol> <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">共用体变量名.成员名</span><br><span class="line">指针变量名-&gt;成员名</span><br><span class="line">(*指针变量名).成员名</span><br></pre></td></tr></table></figure><ol start="2"><li>共用体变量中起作用的是最近一次存入的成员变量的值，原有成员变量的值将被覆盖</li></ol></li><li>共用体变量的整体赋值<ol><li>ANSI C标准允许在两个类型相同的共用体变量之间进行赋值操作</li></ol></li><li>向函数传递共用体变量的值<ol><li>共用体类型的变量可以作为实参进行传递，也可以传送共用体变量的地址</li></ol></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>「C语言程序设计」编译预处理和动态存储分配</title>
+      <link href="/01c591089b48.html"/>
+      <url>/01c591089b48.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="编译预处理">编译预处理</h2><blockquote><p>C语言中，凡是以“#”开头的行，都被称为“编译预处理”命令行</p></blockquote><h3 id="宏替换">宏替换</h3><ol><li>不带参数的宏定义<ol><li>命令行形式</li></ol> <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> 宏名 替换文本</span></span><br><span class="line">或</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> 宏名</span></span><br></pre></td></tr></table></figure><ol start="2"><li>替换文本可以包含已定义过的宏名</li><li>当宏定义在一行中写不下，只需要在最后一个字符后紧接着加一个反斜线“\”<ol><li>如果在“\”前或在下一行的开头留有许多空格，则在宏替换时也加入这些空格</li></ol></li><li>同一个宏名不能重复定义，除非两个宏定义命令行完全一致</li><li>替换文本不能替换双引号中与宏名相同的字符串</li><li>替换文本并不替换用户标识符中的成分</li><li>用作宏名的标识符通常用大写字母表示</li><li>宏定义的定义位置一般写在程序的开头</li></ol></li><li>带参数的宏定义<ol><li>命令行形式：<code>#define 宏名(形参表) 替换文本</code></li><li>同一个宏名不能重复定义，除非两个宏定义命令行完全一致</li><li>在调用带参数的宏名时，一对圆括号必不可少，圆括号中实参的个数应该与形参个数相同，若有多个参数，它们之间用逗号隔开</li><li>在“替换文本”中的形参和整个表达式应该用括号括起来</li><li>在宏替换中，对参数没有类型的要求</li><li>宏替换中，实参不能替换括在双引号中的形参</li></ol></li><li>终止宏定义<ol><li>可以用 <code>#undef</code> 提前终止宏定义的作用域</li></ol> <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> PI 3.14</span></span><br><span class="line">main()&#123;</span><br><span class="line">·</span><br><span class="line">·</span><br><span class="line">·</span><br><span class="line"><span class="meta">#<span class="keyword">undef</span> PI</span></span><br><span class="line">·</span><br><span class="line">·</span><br><span class="line">·</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ol><h3 id="文件包含">文件包含</h3><ol><li>一般形式：<code>#include &lt;文件名&gt;</code> 或 <code>#include &quot;文件名&quot;</code></li></ol><h2 id="动态存储分配">动态存储分配</h2><h3 id="malloc函数和free函数">malloc函数和free函数</h3><h4 id="malloc函数">malloc函数</h4><ol><li>malloc函数返回值类型为void *，函数的调用形式为 <code>malloc(size)</code> ，要求size的类型为unsigned int</li><li>malloc函数用来分配size个字节的存储区，返回一个指向存储区首地址的基类型为void的地址。若没有足够的内存单元供分配，函数返回空(NULL)</li><li>在动态申请存储空间时，若不能确定数据类型所占字节数，可以使用sizeof运算符来求得 <code>pi=(int *)malloc(sizeof(int));</code></li></ol><h4 id="free函数">free函数</h4><ol><li>函数的调用形式：<code>free(p);</code></li><li>指针变量p必须指向有动态分配函数malloc或calloc分配的地址</li><li>free函数将指针p所指的存储空间释放</li><li>此函数没有返回值</li></ol><h3 id="calloc函数">calloc函数</h3><ol><li>函数的返回值类型为void *</li><li>调用形式：<code>calloc(n,size);</code> ，要求n和size的类型都为unsigned int</li><li>calloc函数用来给n个同一类型的数据项分配连续的存储空间，每个数据项的长度为size个字节。若分配成功，函数返回存储空间的首地址；否则返回空</li><li>通过调用calloc函数所分配的存储单元，系统自动置初值0</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>「C语言程序设计」对函数的进一步讨论</title>
+      <link href="/a8b3854293c7.html"/>
+      <url>/a8b3854293c7.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="传给main函数的参数">传给main函数的参数</h2><ol><li>main函数通常可用两个参数<ol><li>第一个参数argc必须是整型</li><li>第二个参数argv是一个指向字符型的指针数组指针，每个指针都指向一个字符串</li></ol></li></ol><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">main(<span class="type">int</span> argc, <span class="type">char</span> **argv)&#123;</span><br><span class="line">···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="通过实参向函数传递函数名或指向函数的指针变量">通过实参向函数传递函数名或指向函数的指针变量</h2><ol><li>指向函数指针变量的定义：C语言中函数名代表该函数的入口地址，因此可以定义一种指向函数的指针来存放这种地址</li></ol><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio&gt;</span></span></span><br><span class="line"><span class="type">double</span> <span class="title function_">fun</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> *p)</span>&#123;</span><br><span class="line">···</span><br><span class="line">&#125;</span><br><span class="line">main()&#123;</span><br><span class="line"><span class="type">double</span> (*fp)(<span class="type">int</span>, <span class="type">int</span> *),y;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line">fp = fun;</span><br><span class="line">·</span><br><span class="line">·</span><br><span class="line">·</span><br><span class="line">y = (*fp)(<span class="number">56</span>, &amp;n);    <span class="comment">/* 此处通过指向函数的指针调用fun函数 */</span></span><br><span class="line">·</span><br><span class="line">·</span><br><span class="line">·</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="2"><li>函数名或指向函数的指针变量作为实参：函数名或指向函数的指针变量可以作为实参传送给函数</li></ol><h2 id="函数的递归调用">函数的递归调用</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">用递归的方法求n!</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">fac</span><span class="params">(<span class="type">int</span> n)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;输入数据：&quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d!=%d&quot;</span>, n, fac(n));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">fac</span><span class="params">(<span class="type">int</span> n)</span>&#123;</span><br><span class="line">    <span class="type">int</span> f;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">1</span> || n == <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        f = n * fac(n - <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> f;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>「C语言程序设计」用户标识符的作用域和存储类</title>
+      <link href="/23a7ed07467c.html"/>
+      <url>/23a7ed07467c.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="局部变量">局部变量</h2><ol><li>局部变量（内部变量）：在函数内部或符合语句内部定义的变量<ol><li>函数的形参也属于局部变量</li></ol></li><li>全局变量（外部变量）：在函数外部定义的变量</li><li>C语言中，由两种存储类别：一种是自动类，一种是静态类。局部变量既可以说明成自动类，也可以说明成静态类；局部变量只能是静态类<ol><li>四个与两个存储类别相关的说明符：auto（自动）、register（寄存器）、static（静态）、extern（外部）。它们可以放在类型名的左边，也可以放在类型名的右边</li><li>动态存储区用来保存函数调用时的返回地址、自动类别的局部变量等。静态存储区用以存放局部变量及静态类别的局部变量</li></ol></li></ol><h2 id="局部变量及其作用域和生存期">局部变量及其作用域和生存期</h2><h3 id="auto变量">auto变量</h3><ol><li>当在函数内部或复合语句内定义变量时，如果没有指定存储类，或使用了auto说明符，系统就认为所定义的变量具有自动类别</li><li>auto变量的存储单元被分配在内存的动态存储区。每当进入函数体（或复合语句）时，系统自动为auto变量分配存储单元；退出时自动释放这些存储单元另作他用</li></ol><h3 id="register变量">register变量</h3><ol><li>寄存器变量也是自动类变量。它与auto变量的区别在于用register说明的变量建议编译程序将变量的值保留在CPU寄存器中，而不是像一般变量一样，占存储单元</li><li>CPU中寄存器的数目是有限的，因此只能说明少数的寄存器变量</li><li>register变量没有地址，不能进行求地址运算</li><li>register变量的说明应尽量靠近其使用的地方，用完之后尽快释放</li></ol><h3 id="静态存储类的局部变量">静态存储类的局部变量</h3><ol><li>当在函数体（或复合函数）内部使用static来说明一个变量时，称该变量为静态局部变量</li><li>在程序运行期间，静态局部变量在内存的静态存储区中占据着永久性的存储单元</li><li>静态局部变量的初值是在编译时赋予的，不是在程序执行期间赋予的。对未赋初值的静态局部变量，C编译程序自动给它赋初值0</li></ol><h2 id="全局变量及其作用域和生存期">全局变量及其作用域和生存期</h2><p>全局变量只有静态一种类别。对于全局变量可使用extern和static两种说明符</p><h3 id="全局变量的作用域和生存期">全局变量的作用域和生存期</h3><ol><li>全局变量是在函数外部任意位置上定义的变量，它的作用域是从变量定义的位置开始，到整个源文件结束</li><li>全局变量的生存期是整个程序的运行期间</li><li>若全局变量和某个函数中的局部变量同名，则在该函数中，此全局变量被屏蔽</li></ol><h3 id="在同一编译单位内使用extern说明扩展全局变量的作用域">在同一编译单位内使用extern说明扩展全局变量的作用域</h3><ol><li>当全局变量定义在后，引用它的函数在前时，应该在引用它的函数中用extern对此全局变量进行说明：该变量是一个已在外部定义了的全局变量，已经分配了存储单元，不需再为它另外开辟存储单元。</li></ol><h3 id="在不同编译单位内用extern说明符扩展全局变量的作用域">在不同编译单位内用extern说明符扩展全局变量的作用域</h3><ol><li>在其中一个文件中定义所有全局变量，而在其他用到这些全局变量的文件中用extern对这些变量进行说明</li></ol><h3 id="静态全局变量">静态全局变量</h3><ol><li>静态全局变量只限于本编译单位使用，不能被其他编译单位所引用</li></ol><h2 id="函数的存储分类">函数的存储分类</h2><h3 id="用extern说明函数">用extern说明函数</h3><ol><li>若在函数返回值的类型前加上说明符extern，称此函数为“外部”函数</li><li>extern说明可以省略，一般函数都隐含说明为extern</li><li>外部函数的特征为可以被其他编译单位中的函数调用</li></ol><h3 id="用static说明函数">用static说明函数</h3><ol><li>若在函数返回值的类型前加上说明符static，称此函数为“静态”函数</li><li>静态函数的特征是只限于本编译单位的其他函数调用它，而不允许其他编译单位中的函数对它进行调用</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>「C语言程序设计」字符串</title>
       <link href="/3930558c6af5.html"/>
       <url>/3930558c6af5.html</url>
