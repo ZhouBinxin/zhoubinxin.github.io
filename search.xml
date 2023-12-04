@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>「Linux」远程连接Linux系统</title>
+      <link href="/ac1f5b3e941d.html"/>
+      <url>/ac1f5b3e941d.html</url>
+      
+        <content type="html"><![CDATA[<ol><li>在Linux桌面右键Open Terminal输入ifconfig</li><li>回车 在ens33中有一行ip地址</li><li>在FinalShell中点击文件夹图标选择SSH连接</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Json</title>
       <link href="/c172f81a0ee6.html"/>
       <url>/c172f81a0ee6.html</url>
