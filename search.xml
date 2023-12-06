@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>「Linux」用户操作</title>
+      <link href="/f854c6ecadbe.html"/>
+      <url>/f854c6ecadbe.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="root用户">root用户</h2><ol><li>su：切换账户<ol><li>语法：<code>su [–] [用户名]</code><ol><li>-：可选，表示是否在切换用户后加载环境变量，建议带上</li><li>用户名：表示要切换的用户，省略时表示切换到root</li><li>切换用户后，通过exit命令退回上一个用户，也可使用ctrl+d</li></ol></li></ol></li><li>sudo：为普通命令授权，临时以root身份执行命令<ol><li>语法：<code>sudo 其他命令</code></li><li>配置sudo认证<ol><li>切换到root用户，执行visudo命令</li><li>在文件最后添加：zbx ALL=(ALL) NOPASSWD:ALL</li><li>wq保存</li><li>切换回普通用户</li></ol></li></ol></li></ol><h2 id="用户、用户组管理">用户、用户组管理</h2><blockquote><p>以下命令需root用户执行</p></blockquote><ol><li>用户组管理<ol><li>创建用户组<ol><li>语法：groupadd 用户组名</li></ol></li><li>删除用户组<ol><li>语法：groupdel 用户组名</li></ol></li></ol></li><li>用户管理<ol><li>创建用户<ol><li>语法：<code>useradd [-g -d] 用户名</code><ol><li>-g：指定用户的组，不指定-g，会创建同名组并自动加入，指定-g需要组已经存在，如已存在同名组，必须使用-g</li><li>-d：指定用户HOME路径，不指定，HOME目录默认在：/home/用户名</li></ol></li><li>删除用户<ol><li>语法：<code>userdel [-r] 用户名</code><ol><li>-r：删除用户的HOME目录，不使用-r，删除用户时，HOME目录保留</li></ol></li></ol></li><li>查看用户所属组<ol><li>语法：<code>id [用户名]</code></li></ol></li><li>修改用户所属组<ol><li>语法：usermod -aG 用户组 用户名<ol><li>将指定用户加入指定用户组</li></ol></li></ol></li><li>getent<ol><li>查看系统全部用户信息<ol><li>语法：getent passwd<ol><li>显示的7份信息：用户名：密码（x）：用户ID：组ID：描述信息（无用）：HOME目录：执行终端（默认bush）</li></ol></li></ol></li><li>查看系统全部组信息<ol><li>语法：getent group</li></ol></li></ol></li></ol></li></ol></li></ol><h2 id="查看权限控制">查看权限控制</h2><ol><li>通过ls -l 可以以列表形式查看内容，并显示权限细节<img src="pic/2023120601.png" alt=""><ol><li>序号1：表示文件、文件夹的权限控制信息,权限细节共分为10个槽位<img src="pic/2023120602.png" alt=""><ol><li>r表示读权限</li><li>w表示写权限</li><li>x表示执行权限</li></ol></li><li>序号2：表示文件、文件夹所属用户</li><li>序号3：表示文件、文件夹所属用户组</li></ol></li></ol><h2 id="修改权限控制">修改权限控制</h2><ol><li>chmod：修改文件、文件夹权限信息<ol><li>只有文件、文件夹的所属用户或root用户可以修改</li><li>语法：chomd [-R] 权限 文件或文件夹<ol><li>-R：对文件夹内的全部内容应用同样操作</li><li>示例：chomd u=rwx ,g=rx,o=x hello.txt<ol><li>u表示user所属用户权限，g表示group组用户权限，o表示other用户权限</li></ol></li><li>快捷表示：chomd 751 hello.txt</li></ol></li><li>权限的数字序号：r记为4，w记为2，x记为1<ol><li>0 无任何权限：—</li><li>1 仅有x权限：–x</li><li>2 仅有w权限：-w-</li><li>3 有w和x权限：-wr</li><li>4 仅有r权限：r—</li><li>5 有r和x权限：r-x</li><li>6 有r和w权限：rw-</li><li>7 有全部权限：rwx</li></ol></li></ol></li><li>chown：修改文件、文件夹的所属用户和用户组<ol><li>此命令只适用与root用户执行</li><li>语法：<code>chown [-R] [用户] [:] [用户组]</code><ol><li>-R：对文件夹内全部内容应用相同规则</li><li>用户：修改所属用户</li><li>用户组：修改所属用户组</li><li><code>:</code> ：用于分隔用户和用户组</li></ol></li></ol></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>「Linux」基础命令</title>
       <link href="/3fd9edf539c8.html"/>
       <url>/3fd9edf539c8.html</url>
